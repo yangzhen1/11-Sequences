@@ -18,12 +18,26 @@ import builtins  # Never necessary, but here to make a point about SUM
 import math
 
 
+# -------------------------------------------------------------------------
+# STUDENTS: Do the work in this module as follows.
+#   Otherwise, you will be overwhelmed by the output.
+#
+#   For each function that you implement (TODOs 3 - 9):
+#     1. Locate the statements just below this comment
+#          that call TEST functions.
+#     2. UN-comment only one test at a time.
+#     3. Implement that function per its _TODO_.
+#     4. When satisfied with your work, move onto the next test,
+#        RE-commenting out the previous test if you wish.
+# -------------------------------------------------------------------------
+
+
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_sequence()
-    run_test_count_items_bigger_than()
-    run_test_count_positive_sines()
-    run_test_sum_first_n()
+    # run_test_count_items_bigger_than()
+    # run_test_count_positive_sines()
+    # run_test_sum_first_n()
 
 
 def run_test_sum_sequence():
@@ -160,6 +174,7 @@ def run_test_sum_sequence():
     #      number drawn RANDOMLY from -10 to 10 (inclusive),
     #      the result should be close to the average of the numbers
     #      from -10 to 10 (inclusive) [which is 0].
+    #   and the Central Limit Theorem (which quantifies the likely "spread").
     #
     #   See https://en.wikipedia.org/wiki/Law_of_large_numbers
     #   for a not-too-clear explanation of the Law of Large Numbers.
@@ -182,13 +197,16 @@ def run_test_sum_sequence():
     print('Test 6: Using the following RANDOMLY generated sequence:')
     print('   ', sequence6)
 
+    print()
     print('  Expected results (from PROBABILITY THEORY):')
     print('    Sum:     ', expected_sum_from_probability_theory)
     print('    Average: ', expected_average_from_probability_theory)
-    print('  ACTUAL results (should be CLOSE to the above)')
+    print('  ACTUAL results ("usually" should be "CLOSE" to the above)')
     print('    Sum:     ', actual_sum)
     print('    Average: ', actual_average)
-    print('  where "close" for the sum means absolute value < about 600')
+    print('  where "usually" and "close" for the SUM means that')
+    print('  about 90% of the time,')
+    print('  the absolute value of the SUM is less than about 1000.')
 
 
 def sum_sequence(sequence):
