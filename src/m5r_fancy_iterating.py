@@ -13,12 +13,12 @@ is different from:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Zhen Yang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 ###############################################################################
-# TODO: 2. READ the program below and RUN it.
+# DONE: 2. READ the program below and RUN it.
 #
 #   When you have read it, asking questions as needed,
 #   and you feel that you understand:
@@ -47,6 +47,12 @@ def main():
 
 
 def sum_string_lengths(sequence, m, n):
+    total = 0
+    for k in range(n, m - 1, -1):
+        total = total + len(sequence[k])
+    return total
+
+
     """
     What comes in:
       -- A sequence of strings
@@ -96,6 +102,7 @@ def sum_string_lengths(sequence, m, n):
 
 
 def sum_even_integers(sequence):
+
     """
     What comes in:
       -- A sequence
